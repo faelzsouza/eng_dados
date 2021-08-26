@@ -8,10 +8,6 @@ class Midia(ABC):
     @abstractmethod
     def armazenar():
         pass
-
-    @abstractmethod
-    def buscaTudo():
-        pass
     
     @abstractmethod
     def atualizar():
@@ -21,16 +17,39 @@ class Midia(ABC):
     def deletar():
         pass
 
+class Filme(Midia):
+    def __init__(self,tipo,id,titulo,direcao,ano,genero,sinopse):
+        super().__init__(tipo,id)
+        self.titulo = titulo
+        self.direcao = direcao
+        self.ano = ano
+        self.genero = genero
+        self.sinopse = sinopse
+
+    
+    def armazenar():
+        pass
+
+    def buscaTudo():
+        pass
+
+    def assistir():
+        pass
+
+    def deletar():
+        pass
+
+    def atualizar():
+        pass
+
+
 class Serie(Filme):
-    def __init__(self, tipo, id, titulo, direcao, ano, genero, sinopse):
-        super().__init__(tipo, id, titulo, direcao, ano, genero, sinopse, episodios, produtora)
+    def __init__(self, tipo, id, titulo, direcao, ano, genero, sinopse, episodios, produtora):
+        super().__init__(tipo, id, titulo, direcao, ano, genero, sinopse)
         self.episodios = episodios
         self.produtora = produtora
     
     def armazenar(self, obj):
-        pass
-
-    def buscaTudo(self):
         pass
 
     def assistir(self):
@@ -42,3 +61,7 @@ class Serie(Filme):
     def deletar(self, id):
         pass
 
+listaSeries = []
+
+serie = Serie('visual', 1, 'Dark', 'Não sei', 2019, 'Suspense', 'Muito Bom!', 20, 'Também não sei')
+print(vars(serie))
