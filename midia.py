@@ -21,3 +21,31 @@ class Midia(ABC):
     def deletar():
         pass
 
+class Filme(Midia):
+  def _init_(self,tipo,id,titulo,direcao,ano,genero,sinopse):
+    super().__init__(tipo,id)
+    self.titulo = titulo
+    self.direcao = direcao
+    self.ano = ano
+    self.genero = genero
+    self.sinopse = sinopse
+
+    
+    def armazenar():
+        pass
+    
+   
+    def buscaTudo():
+        pass
+    
+  
+    def assistir():
+        pass
+    
+
+    def deletar():
+        pass
+    
+
+    def atualizar():
+        pass
